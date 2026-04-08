@@ -45,5 +45,10 @@ pub fn resolve_library_path(
         }
     }
 
+    // 4. Embedded default library (extracted on first run)
+    if let Some(lib) = crate::embedded::extract_default_library() {
+        return Some(lib);
+    }
+
     None
 }

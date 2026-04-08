@@ -28,6 +28,7 @@ notify-debouncer-mini = "0.6"
 pulldown-cmark = "0.12"
 walkdir = "2"
 regex = "1"
+include_dir = "0.7.4"
 
 [dev-dependencies]
 tempfile = "3"

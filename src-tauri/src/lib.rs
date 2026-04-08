@@ -1,4 +1,5 @@
 mod commands;
+mod embedded;
 mod models;
 mod parser;
 pub mod state;
