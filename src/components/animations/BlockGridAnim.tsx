@@ -1,8 +1,6 @@
 import { useRef, useEffect } from "react";
 import type { AnimationProps } from "./registry";
 
-const COLORS = ["#60a5fa", "#4ade80", "#f472b6", "#fbbf24", "#a78bfa"];
-
 export function BlockGridAnim({ params }: AnimationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
@@ -40,8 +38,6 @@ export function BlockGridAnim({ params }: AnimationProps) {
       const b = Math.max(1, Math.round(Math.abs(valB)));
       const maxCells = Math.max(a, b, 1);
       const cellSize = Math.min((w * 0.4) / maxCells, (h - 100) / maxCells, 50);
-      const gapX = 60;
-
       // Group A (left)
       const gAx = w * 0.22 - (a * cellSize) / 2;
       const gAy = h * 0.5 - (a * cellSize) / 2;

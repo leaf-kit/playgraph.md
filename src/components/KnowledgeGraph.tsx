@@ -40,7 +40,6 @@ const DIFFICULTY_SIZE: Record<string, number> = {
 
 export function KnowledgeGraph({
   lang,
-  localized,
   onSelectConcept,
 }: KnowledgeGraphProps) {
   const svgRef = useRef<SVGSVGElement>(null);

@@ -212,10 +212,6 @@ function drawSorting(ctx: CanvasRenderingContext2D, w: number, h: number, t: num
   const baseY = h - 60;
 
   // Determine which step of sorting we're at
-  const step = Math.floor(t * 1.2) % (size * size);
-  const i1 = step % size;
-  const i2 = Math.min(i1 + 1, size - 1);
-
   // Simulate partial bubble sort state
   const sorted = [...arr];
   const totalSteps = Math.floor(t * 1.2);
@@ -448,7 +444,7 @@ function drawLinkedList(ctx: CanvasRenderingContext2D, w: number, h: number, t: 
 }
 
 // ════════════ Hash Table ════════════
-function drawHashTable(ctx: CanvasRenderingContext2D, w: number, h: number, t: number, vals: number[], size: number, key: number) {
+function drawHashTable(ctx: CanvasRenderingContext2D, w: number, _h: number, _t: number, vals: number[], size: number, key: number) {
   const buckets = Math.min(8, size);
   const boxW = 70, boxH = 36, gap = 6;
   const startX = w * 0.15;
@@ -457,8 +453,6 @@ function drawHashTable(ctx: CanvasRenderingContext2D, w: number, h: number, t: n
   // Hash function visualization
   const hashKey = vals[key % vals.length];
   const hashResult = hashKey % buckets;
-  const hashPhase = (t * 0.6) % 2;
-
   // Draw buckets
   for (let i = 0; i < buckets; i++) {
     const by = startY + i * (boxH + gap);

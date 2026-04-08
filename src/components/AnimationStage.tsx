@@ -8,7 +8,7 @@ interface AnimationStageProps {
   localized: (text: LocalizedText) => string;
 }
 
-export function AnimationStage({ block, lang, localized }: AnimationStageProps) {
+export function AnimationStage({ block, localized }: AnimationStageProps) {
   const initialValues = useMemo(() => {
     const vals: Record<string, number | boolean> = {};
     for (const [key, param] of Object.entries(block.params)) {

@@ -43,7 +43,6 @@ export function Sidebar({
   onToggleGraph,
   onOpenFolder,
   libraryPath,
-  lang,
   onToggleLang,
   t,
   localized,

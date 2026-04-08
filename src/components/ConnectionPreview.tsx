@@ -11,7 +11,6 @@ interface ConnectionPreviewProps {
 
 export function ConnectionPreview({
   conceptId,
-  lang,
   localized,
   onClick,
 }: ConnectionPreviewProps) {
@@ -20,7 +19,7 @@ export function ConnectionPreview({
   const [loading, setLoading] = useState(false);
   const [position, setPosition] = useState<"above" | "below">("above");
   const tagRef = useRef<HTMLButtonElement>(null);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const handleMouseEnter = () => {
     timerRef.current = setTimeout(() => {
