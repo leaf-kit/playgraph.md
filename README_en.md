@@ -22,9 +22,13 @@
 
 ## Screenshots
 
-| Animation View — Wave Interference | Knowledge Graph View |
-|:---:|:---:|
-| ![Animation View](images/screen1.png) | ![Graph View](images/screen2.png) |
+**Animation View — Wave Interference**
+
+![Animation View](images/screen1.png)
+
+**Knowledge Graph View**
+
+![Graph View](images/screen2.png)
 
 ---
 

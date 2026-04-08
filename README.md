@@ -24,9 +24,13 @@
 
 ## 스크린샷
 
-| 애니메이션 뷰 — 파동의 간섭 | 지식 그래프 뷰 |
-|:---:|:---:|
-| ![Animation View](images/screen1.png) | ![Graph View](images/screen2.png) |
+**애니메이션 뷰 — 파동의 간섭**
+
+![Animation View](images/screen1.png)
+
+**지식 그래프 뷰**
+
+![Graph View](images/screen2.png)
 
 ---
 
