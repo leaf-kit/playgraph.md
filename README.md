@@ -14,7 +14,7 @@
 
 > 📖 [English Documentation](README_en.md)
 
-> **v0.1.0** — [GitHub Release](https://github.com/leaf-kit/playgraph.md/releases/tag/v0.1.0) | [Homebrew Tap](https://github.com/leaf-kit/homebrew-playgraph)
+> **v0.2.0 "따뜻한 교실 (Warm Classroom)"** — [GitHub Release](https://github.com/leaf-kit/playgraph.md/releases/tag/v0.2.0) | [Homebrew Tap](https://github.com/leaf-kit/homebrew-playgraph) | [변경 이력 (CHANGELOG)](CHANGELOG.md)
 >
 > ```bash
 > brew tap leaf-kit/playgraph.md && brew install playgraph
@@ -132,6 +132,31 @@ library/
 └── 08_software_engineering/ # 소프트웨어 공학
 ```
 
+### 📚 Library 구성 현황 (v0.2.0)
+
+| 폴더 | 카테고리 | 파일 수 | 구성 파일 |
+|------|----------|---------|-----------|
+| `01_elementary_math/` | 초등 수학 | 19개 | `addition` `subtraction` `multiplication` `division` `fractions` `decimals` `number-line` `area-rectangle` `area-triangle` `area-circle` `area-parallelogram` `area-trapezoid` `perimeter` `shapes-2d` `angles` `clock-time` `bar-graph` `patterns` `symmetry` |
+| `02_middle_math/` | 중등 수학 | 17개 | `integers` `rational-numbers` `exponents` `square-root` `coordinate-plane` `linear-equation` `linear-function` `inequality` `quadratic-equation` `factoring` `proportion` `pythagorean-theorem` `similar-triangles` `circle-properties` `statistics-mean` `probability-basic` `sets` |
+| `03_middle_physics/` | 중등 물리 | 12개 | `density` `pressure` `buoyancy` `gravity` `speed-velocity` `force-motion` `energy-conservation` `heat-transfer` `light-reflection` `light-refraction` `waves-basic` `electric-circuit` |
+| `04_high_math/` | 고등 수학 | 21개 | `sequences-series` `arithmetic-series` `geometric-series` `exponential-function` `logarithm` `polynomial` `quadratic-function` `unit-circle` `sine-wave` `trigonometric-functions` `vectors` `complex-numbers` `matrices` `binomial-theorem` `permutation-combination` `probability-distribution` `limits` `derivatives` `integrals` `differential-equations` `conic-sections` |
+| `05_high_physics/` | 고등 물리 | 16개 | `newtons-laws` `momentum` `circular-motion` `projectile-motion` `pendulum` `simple-harmonic-motion` `work-energy` `ohms-law` `electric-field` `capacitor` `magnetic-field` `electromagnetic-induction` `doppler-effect` `wave-interference` `thermodynamics` `nuclear-physics` |
+| `06_data_structures/` | 자료구조 & 알고리즘 | 19개 | `array` `linked-list` `stack` `queue` `hash-table` `binary-tree` `binary-search-tree` `heap` `trie` `big-o-notation` `binary-search` `bfs-dfs` `graph-traversal` `dijkstra` `sorting-bubble` `sorting-merge` `sorting-quick` `recursion` `dynamic-programming` |
+| `07_korean_history/` | 한국사 | 8개 | `gojoseon-era` `three-kingdoms-era` `unified-silla` `goryeo-dynasty` `joseon-dynasty` `japanese-occupation` `korean-war` `modern-korea` |
+| `08_software_engineering/` | 소프트웨어 공학 | 14개 | `sdlc` `waterfall-model` `agile-methodology` `git-workflow` `cicd-pipeline` `testing-strategy` `design-patterns` `solid-principles` `uml-class-diagram` `uml-sequence-diagram` `state-diagram` `er-diagram` `database-normalization` `microservices-architecture` |
+| **합계** | **8개 카테고리** | **126개** | |
+
+> 💡 **나만의 PKM(개인지식관리) 구축하기**
+>
+> 위 Library는 playgraph.md가 제공하는 **샘플 콘텐츠**입니다. 이를 참고하여 자신만의 마크다운 파일을 작성하고,
+> `library/` 폴더에 새로운 카테고리와 개념을 추가하면 **애니메이션 학습 중심의 나만의 PKM(Personal Knowledge Management)**을
+> 구축해 나갈 수 있습니다.
+>
+> - 📁 새 폴더를 만들어 자신만의 카테고리를 추가하세요 (예: `09_chemistry/`, `10_english_grammar/`)
+> - 📝 기존 `.md` 파일을 참고하여 `math-anim` 블록과 프론트매터를 작성하면 즉시 애니메이션으로 렌더링됩니다
+> - 🔗 `connections` 필드로 개념 간 연결 관계를 정의하면 지식 그래프에 자동 반영됩니다
+> - 🔄 핫 리로드 기능으로 파일 수정 시 앱에 즉시 반영되어 실시간 편집이 가능합니다
+
 ### 개념 파일 작성법
 
 각 개념은 YAML 프론트매터가 포함된 마크다운 파일입니다:
@@ -185,7 +210,7 @@ playground/
 
 ```
 ==================================
-  playgraph v0.1.0 — Build & Dev
+  playgraph v0.2.0 — Build & Dev
 ==================================
 
   1) Build (debug)
@@ -237,11 +262,18 @@ playground/
 - [x] Fly-to 내비게이션이 있는 지식 그래프
 - [x] 다국어 지원 (한국어/영어)
 - [x] 핫 리로드 파일 감시
-- [ ] 개념 라이브러리 확장 (8개 카테고리)
+- [x] 개념 라이브러리 확장 (8개 카테고리, 126개 개념)
+- [x] 눈높이별 맞춤 설명 (초등/중등/고등)
 - [ ] 퍼지 매칭 검색
 - [ ] 애니메이션 내보내기 (GIF/동영상)
 - [ ] 커스텀 애니메이션 플러그인 시스템
 - [ ] 모바일 지원
+
+---
+
+## 변경 이력
+
+자세한 변경 이력은 [CHANGELOG.md](CHANGELOG.md)를 참조하세요.
 
 ---
 

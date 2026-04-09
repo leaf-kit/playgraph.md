@@ -1,6 +1,6 @@
 [package]
 name = "playgraph"
-version = "0.1.0"
+version = "0.2.0"
 description = "Interactive math animation viewer powered by markdown"
 authors = ["leaf-kit"]
 license = "MIT"

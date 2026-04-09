@@ -12,7 +12,7 @@
 
 **Markdown-powered Interactive Animation Viewer** — Explore concepts across math, physics, data structures, history, software engineering and more through visual animations and knowledge graphs.
 
-> **v0.1.0** — [GitHub Release](https://github.com/leaf-kit/playgraph.md/releases/tag/v0.1.0) | [Homebrew Tap](https://github.com/leaf-kit/homebrew-playgraph)
+> **v0.2.0 "Warm Classroom"** — [GitHub Release](https://github.com/leaf-kit/playgraph.md/releases/tag/v0.2.0) | [Homebrew Tap](https://github.com/leaf-kit/homebrew-playgraph) | [CHANGELOG](CHANGELOG.md)
 >
 > ```bash
 > brew tap leaf-kit/playgraph.md && brew install playgraph
@@ -183,7 +183,7 @@ playground/
 
 ```
 ==================================
-  playgraph v0.1.0 — Build & Dev
+  playgraph v0.2.0 — Build & Dev
 ==================================
 
   1) Build (debug)
@@ -235,11 +235,18 @@ Tests are required before release builds (option 2). The script automatically ru
 - [x] Knowledge graph with fly-to navigation
 - [x] i18n (KR/EN)
 - [x] Hot-reload file watcher
-- [ ] Expand concept library (8 categories)
+- [x] Expand concept library (8 categories, 126 concepts)
+- [x] Grade-level adaptive explanations (Elementary/Middle/High)
 - [ ] Search with fuzzy matching
 - [ ] Animation export (GIF/video)
 - [ ] Plugin system for custom animations
 - [ ] Mobile support
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 
 ---
 

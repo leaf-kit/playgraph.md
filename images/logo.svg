@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160">
+  <defs>
+    <!-- Background gradient for icon circle -->
+    <radialGradient id="logoBgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2A6E"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </radialGradient>
+
+    <!-- Edge gradient -->
+    <linearGradient id="logoEdgeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <linearGradient id="logoEdgeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <linearGradient id="logoEdgeGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Node gradients -->
+    <radialGradient id="logoActiveNode" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </radialGradient>
+
+    <radialGradient id="logoNodePurple" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </radialGradient>
+
+    <radialGradient id="logoNodeTeal" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </radialGradient>
+
+    <radialGradient id="logoNodeIndigo" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </radialGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="40%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="logoGlowActive" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="logoGlowNode" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Icon area (left side, centered in 160x160 space) -->
+  <g transform="translate(80, 80)">
+    <!-- Background circle -->
+    <circle cx="0" cy="0" r="65" fill="url(#logoBgGrad)"/>
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#4F46E580" stroke-width="1"/>
+
+    <!-- Edges - Node positions relative to center: Active(0,-18), TR(32,-32), R(38,18), B(8,42), L(-35,22) -->
+    <line x1="0" y1="-18" x2="32" y2="-32" stroke="url(#logoEdgeGrad1)" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+    <line x1="0" y1="-18" x2="38" y2="18" stroke="url(#logoEdgeGrad1)" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+    <line x1="0" y1="-18" x2="8" y2="42" stroke="url(#logoEdgeGrad2)" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+    <line x1="0" y1="-18" x2="-35" y2="22" stroke="url(#logoEdgeGrad3)" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+    <line x1="38" y1="18" x2="8" y2="42" stroke="url(#logoEdgeGrad2)" stroke-width="1.4" stroke-linecap="round" opacity="0.4"/>
+    <line x1="-35" y1="22" x2="8" y2="42" stroke="url(#logoEdgeGrad3)" stroke-width="1.4" stroke-linecap="round" opacity="0.4"/>
+    <line x1="32" y1="-32" x2="38" y2="18" stroke="url(#logoEdgeGrad1)" stroke-width="1.4" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Nodes -->
+    <circle cx="32" cy="-32" r="7" fill="url(#logoNodeIndigo)" filter="url(#logoGlowNode)" opacity="0.9"/>
+    <circle cx="38" cy="18" r="8" fill="url(#logoNodePurple)" filter="url(#logoGlowNode)" opacity="0.9"/>
+    <circle cx="8" cy="42" r="6" fill="url(#logoNodeTeal)" filter="url(#logoGlowNode)" opacity="0.9"/>
+    <circle cx="-35" cy="22" r="7" fill="url(#logoNodeTeal)" filter="url(#logoGlowNode)" opacity="0.9"/>
+
+    <!-- Active node -->
+    <circle cx="0" cy="-18" r="12" fill="url(#logoActiveNode)" filter="url(#logoGlowActive)"/>
+    <circle cx="0" cy="-18" r="12" fill="none" stroke="#fff" stroke-width="1" opacity="0.3"/>
+    <circle cx="-2" cy="-21" r="4" fill="#fff" opacity="0.1"/>
+  </g>
+
+  <!-- Text: "playgraph.md" -->
+  <text x="170" y="92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="600" fill="url(#textGrad)" letter-spacing="-0.5">
+    playgraph<tspan font-weight="400" fill="#06B6D4" opacity="0.8">.md</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="172" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#818CF8" opacity="0.6" letter-spacing="2">
+    INTERACTIVE KNOWLEDGE GRAPHS
+  </text>
+</svg>

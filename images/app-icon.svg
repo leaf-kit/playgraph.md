@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2A6E"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </radialGradient>
+
+    <!-- Edge gradient: blue to purple -->
+    <linearGradient id="edgeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <!-- Edge gradient: purple to teal -->
+    <linearGradient id="edgeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Edge gradient: blue to teal -->
+    <linearGradient id="edgeGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Active node gradient -->
+    <radialGradient id="activeNode" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </radialGradient>
+
+    <!-- Node gradient: purple -->
+    <radialGradient id="nodeGradPurple" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </radialGradient>
+
+    <!-- Node gradient: teal -->
+    <radialGradient id="nodeGradTeal" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </radialGradient>
+
+    <!-- Node gradient: indigo -->
+    <radialGradient id="nodeGradIndigo" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </radialGradient>
+
+    <!-- Glow filter for active node -->
+    <filter id="glowActive" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Subtle glow for nodes -->
+    <filter id="glowNode" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Shadow for background circle -->
+    <filter id="bgShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGrad)" filter="url(#bgShadow)"/>
+  <circle cx="256" cy="256" r="240" fill="none" stroke="#4F46E580" stroke-width="1.5"/>
+
+  <!-- Edges (connections between nodes) -->
+  <!-- Node positions: Active(256,200), TopRight(370,150), Right(390,300), Bottom(280,380), Left(140,310) -->
+
+  <!-- Active to TopRight -->
+  <line x1="256" y1="200" x2="370" y2="150" stroke="url(#edgeGrad1)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Active to Right -->
+  <line x1="256" y1="200" x2="390" y2="300" stroke="url(#edgeGrad1)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Active to Bottom -->
+  <line x1="256" y1="200" x2="280" y2="380" stroke="url(#edgeGrad2)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Active to Left -->
+  <line x1="256" y1="200" x2="140" y2="310" stroke="url(#edgeGrad3)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Right to Bottom -->
+  <line x1="390" y1="300" x2="280" y2="380" stroke="url(#edgeGrad2)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Left to Bottom -->
+  <line x1="140" y1="310" x2="280" y2="380" stroke="url(#edgeGrad3)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- TopRight to Right -->
+  <line x1="370" y1="150" x2="390" y2="300" stroke="url(#edgeGrad1)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Nodes -->
+  <!-- Node: Top Right -->
+  <circle cx="370" cy="150" r="20" fill="url(#nodeGradIndigo)" filter="url(#glowNode)" opacity="0.9"/>
+  <circle cx="370" cy="150" r="20" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+
+  <!-- Node: Right -->
+  <circle cx="390" cy="300" r="22" fill="url(#nodeGradPurple)" filter="url(#glowNode)" opacity="0.9"/>
+  <circle cx="390" cy="300" r="22" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+
+  <!-- Node: Bottom -->
+  <circle cx="280" cy="380" r="18" fill="url(#nodeGradTeal)" filter="url(#glowNode)" opacity="0.9"/>
+  <circle cx="280" cy="380" r="18" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+
+  <!-- Node: Left -->
+  <circle cx="140" cy="310" r="20" fill="url(#nodeGradTeal)" filter="url(#glowNode)" opacity="0.9"/>
+  <circle cx="140" cy="310" r="20" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+
+  <!-- Active Node (larger, brighter) -->
+  <circle cx="256" cy="200" r="34" fill="url(#activeNode)" filter="url(#glowActive)"/>
+  <circle cx="256" cy="200" r="34" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.35"/>
+  <!-- Inner highlight on active node -->
+  <circle cx="250" cy="192" r="12" fill="#fff" opacity="0.12"/>
+
+  <!-- Small decorative dots on edges (midpoints) -->
+  <circle cx="313" cy="175" r="3" fill="#818CF8" opacity="0.5"/>
+  <circle cx="323" cy="250" r="3" fill="#A78BFA" opacity="0.4"/>
+  <circle cx="268" cy="290" r="3" fill="#7C3AED" opacity="0.4"/>
+  <circle cx="198" cy="255" r="3" fill="#22D3EE" opacity="0.4"/>
+</svg>
